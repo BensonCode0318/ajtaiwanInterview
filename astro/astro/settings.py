@@ -16,10 +16,12 @@ NEWSPIDER_MODULE = 'astro.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'astro (+http://www.yourdomain.com)'
+USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
+
+HTTPERROR_ALLOWED_CODES = [301]
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -64,9 +66,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'astro.pipelines.AstroPipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'astro.pipelines.AstroPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
@@ -88,3 +90,8 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+MYSQL_HOST = 'localhost'  #改成您的Mysql主機IP
+MYSQL_DB = 'astro'           #改成您的Mysql資料庫
+MYSQL_USER = 'root'       #改成您的Mysql資料庫使用者帳號
+MYSQL_PASS = '875487'           #改成您的Mysql資料庫使用者密碼

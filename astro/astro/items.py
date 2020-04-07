@@ -11,4 +11,9 @@ import scrapy
 class AstroItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    #pass
+    date = scrapy.Field()
+    name = scrapy.Field()
+    detail = scrapy.Field()
+    
+    
