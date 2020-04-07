@@ -5,7 +5,8 @@
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 from scrapy.exporters import  JsonItemExporter
-import pymysql,json
+import json
+#import pymysql
 from astro import settings
 
 class AstroPipeline(object):
