@@ -10,6 +10,7 @@ from astro import settings
 
 class AstroPipeline(object):
     def __init__(self):
+        """
         self.connect = pymysql.connect(
             host=settings.MYSQL_HOST,
             db=settings.MYSQL_DB,
@@ -18,6 +19,7 @@ class AstroPipeline(object):
             charset='utf8',
             use_unicode=True)
         self.cursor = self.connect.cursor()
+        """
 
         self.fp = open("output.json", 'wb')
         self.exporter = JsonItemExporter(self.fp, ensure_ascii=False, encoding='utf-8')
@@ -27,11 +29,13 @@ class AstroPipeline(object):
         pass
  
     def process_item(self, item, spider):
+        """
         detail = json.dumps(item['detail'])
         insert_sql = "INSERT INTO cs_detail(name, detail, date) VALUES ('%s', '%s', '%s')" % (item['name'], detail, item['date'])
         self.cursor.execute(insert_sql)
         insert_id = self.connect.insert_id()
         self.connect.commit()
+        """
         
         self.exporter.export_item(item)
         return item
