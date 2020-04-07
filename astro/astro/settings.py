@@ -95,3 +95,8 @@ MYSQL_HOST = 'localhost'  #改成您的Mysql主機IP
 MYSQL_DB = 'astro'           #改成您的Mysql資料庫
 MYSQL_USER = 'root'       #改成您的Mysql資料庫使用者帳號
 MYSQL_PASS = '875487'           #改成您的Mysql資料庫使用者密碼
+
+#MYSQL_HOST = 'us-cdbr-iron-east-01.cleardb.net'  #改成您的Mysql主機IP
+#MYSQL_DB = 'heroku_5de2e61176bff64'           #改成您的Mysql資料庫
+#MYSQL_USER = 'bef2670f0d92cc'       #改成您的Mysql資料庫使用者帳號
+#MYSQL_PASS = '6bc4c58e'           #改成您的Mysql資料庫使用者密碼
